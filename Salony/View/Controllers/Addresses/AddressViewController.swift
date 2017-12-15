@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 
 class AddressViewController: UIViewController {
+    
     //MARK: - Properties
     var coordinate: CLLocationCoordinate2D?
     @IBOutlet weak var mapView: GMSMapView!
@@ -23,9 +24,15 @@ class AddressViewController: UIViewController {
         configureMapView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated:true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddressVC_AddressTVC" {
             if let viewController = segue.destination as? AddressTableViewController {
+                viewController.delegate = self
                 viewController.coordinate = coordinate
             }
         }
@@ -36,13 +43,21 @@ class AddressViewController: UIViewController {
 private extension AddressViewController {
     
     private func configureMapView() {
+        
+        mapView.isUserInteractionEnabled = false
         if let coordinate = coordinate {
             let camera = GMSCameraPosition.camera(withTarget: coordinate, zoom: 17)
             mapView.camera = camera
-            mapView.isUserInteractionEnabled = false
         } else {
             // hide "locationMark" in if user is skipped location "pinning"
             locationMark.isHidden = true
         }
+    }
+}
+
+// MARK: - AddressTableViewProtocol
+extension AddressViewController: AddressTableViewProtocol {
+    func closeButtonPressed() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }

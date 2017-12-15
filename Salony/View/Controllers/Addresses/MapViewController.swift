@@ -66,16 +66,17 @@ class MapViewController: UIViewController, UIActivityPresenter {
 // MARK: - Supporting functions
 private extension MapViewController {
     
-    private func configureNavigationController() {
+    func configureNavigationController() {
         // changing Navigation bar color
         self.navigationController?.navigationBar.barTintColor = UIColor(red:0.62, green:0.12, blue:0.38, alpha:1.0)
+        self.navigationItem.title = ""
     }
     
-    private func configureMapView() {
+    func configureMapView() {
         let camera = GMSCameraPosition.camera(withLatitude: 29.364813, longitude: 47.982395, zoom: 17)
         
         mapView.camera = camera
-        mapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 55, right: 0)
+        mapView.padding = UIEdgeInsets(top: 0, left: 3, bottom: 55, right: 0)
     }
     
     private func configureLocationButton() {

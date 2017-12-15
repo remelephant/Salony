@@ -10,6 +10,10 @@ import UIKit
 import DropDown
 import GoogleMaps
 
+protocol AddressTableViewProtocol {
+    func closeButtonPressed()
+}
+
 class AddressTableViewController: UITableViewController, UIActivityPresenter {
     
     //MARK: - Properties
@@ -31,6 +35,8 @@ class AddressTableViewController: UITableViewController, UIActivityPresenter {
     
     let server = AddressDataManager()
     var coordinate: CLLocationCoordinate2D?
+    
+    var delegate: AddressTableViewProtocol?
     
     // MARK: - Drop Down
     let dropDown = DropDown()
@@ -75,16 +81,23 @@ class AddressTableViewController: UITableViewController, UIActivityPresenter {
         dropDown.show()
     }
     
+    @IBAction func saveAddressButtonPressed(_ sender: Any) {
+        delegate?.closeButtonPressed()
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension AddressTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if section == 0 {
+            return 10
+        } else {
+            return 1
+        }
     }
 }
 

@@ -8,9 +8,12 @@
 
 import Foundation
 
-struct APIEndpoint {
+struct APIEndpoints {
     // all endpoints with path should have "/" at the end
     
     // MARK: - User
     static let userAddress = "/addresses/geolocate"
+    
+    // MARK: - Info
+    static let areas = "/areas"
 }

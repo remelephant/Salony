@@ -12,8 +12,10 @@ class ModelAddress: Decodable {
     var id: Int?
     var label: String?
     var preview: String?
-    var province_id: String?
-    var areaID: String?
+    var province: String?
+    var provinceID: String?
+    var area: String?
+    var areaID: Int?
     var block: String?
     var street: String?
     var avenue: String?
@@ -23,7 +25,20 @@ class ModelAddress: Decodable {
     var locationInstructions: String?
     
     enum CodingKeys: String, CodingKey {
+        case id
+        case label
+        case preview
+        case province
+        case provinceID = "province_id"
+        case area
+        case areaID = "area_id"
+        case block
+        case street
+        case avenue
+        case building
+        case latitude = "lat"
+        case longitude = "lng"
         case locationInstructions = "location_instructions"
-        case province_id = "province_id"
+        
     }
 }

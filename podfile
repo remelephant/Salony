@@ -8,5 +8,6 @@ target 'Salony' do
   # Pods for Salony
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'DropDown'
 
 end

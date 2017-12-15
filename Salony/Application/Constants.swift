@@ -11,10 +11,11 @@ import Foundation
 class Constants {
     
     static let bundleID = Bundle.main.bundleIdentifier
-    static let APIEntryPoint = "‘http://staging.salony.com/v5"
+    static let APIEntryPoint = "http://staging.salony.com/v5"
     
     /// storyboard segues
     struct Segues {
         static let mapVCToAddressVC = "MapVC_AddressVC"
+        static let addressVCToAddressTBC = "AddressVC_AddressTVC"
     }
 }

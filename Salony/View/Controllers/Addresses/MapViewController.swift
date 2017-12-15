@@ -8,16 +8,28 @@
 
 import UIKit
 import GoogleMaps
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, UIActivityPresenter {
+    
     //MARK: - Properties
+    
+    // UIActivityPresenter
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    var whiteView: UIView = UIView()
+    
+    // IBOutlets
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var centerPoint: UIView!
     
+    let locationManager = LocationManager()
+    
     // MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
         
         // Configure UI elements
         configureNavigationController()
@@ -47,12 +59,12 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func locationButtonPressed(_ sender: Any) {
-        
+        locationManager.findCurrentLocation()
     }
 }
 
 // MARK: - Supporting functions
-extension MapViewController {
+private extension MapViewController {
     
     private func configureNavigationController() {
         // changing Navigation bar color
@@ -60,7 +72,8 @@ extension MapViewController {
     }
     
     private func configureMapView() {
-        let camera = GMSCameraPosition.camera(withLatitude: 40.182479, longitude: 44.515844, zoom: 17)
+        let camera = GMSCameraPosition.camera(withLatitude: 29.364813, longitude: 47.982395, zoom: 17)
+        
         mapView.camera = camera
         mapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 55, right: 0)
     }
@@ -71,5 +84,25 @@ extension MapViewController {
         locationButton.layer.shadowOpacity = 1.0
         locationButton.layer.shadowRadius = 3
         locationButton.layer.masksToBounds = false
+    }
+}
+
+extension MapViewController: LocationManagerDelegate {
+    func locationAccessDenied() {
+        showAlertWithoutAction(message: "Enable Location services from settings")
+    }
+    
+    func locationDidFound(placemark: CLPlacemark?) {
+        if let placemark = placemark {
+            let coordinate = placemark.location?.coordinate
+            
+            CATransaction.begin()
+            CATransaction.setValue(1, forKey: kCATransactionAnimationDuration)
+            
+            // animate camera to the users current coordinates
+            let camera = GMSCameraPosition.camera(withTarget: coordinate!, zoom: 17)
+            mapView!.animate(to: camera)
+            CATransaction.commit()
+        }
     }
 }

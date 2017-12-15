@@ -44,7 +44,7 @@ public extension UIActivityPresenter where Self: UIViewController {
         }
     }
     
-    func addAlertWithoutAction(title: String? = nil, message: String) {
+    func showAlertWithoutAction(title: String? = nil, message: String) {
         let alert = UIAlertController(title: title ?? "Warning", message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)

@@ -13,6 +13,7 @@ class AddressViewController: UIViewController {
     //MARK: - Properties
     var coordinate: CLLocationCoordinate2D?
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var locationMark: UIImageView!
     
     //MARK: - View
     override func viewDidLoad() {
@@ -22,16 +23,26 @@ class AddressViewController: UIViewController {
         configureMapView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddressVC_AddressTVC" {
+            if let viewController = segue.destination as? AddressTableViewController {
+                viewController.coordinate = coordinate
+            }
+        }
     }
 }
 
 // MARK: - Supporting functions
-extension AddressViewController {
+private extension AddressViewController {
     
     private func configureMapView() {
-        let camera = GMSCameraPosition.camera(withTarget: coordinate!, zoom: 17)
-        mapView.camera = camera
-        print(coordinate)    }
+        if let coordinate = coordinate {
+            let camera = GMSCameraPosition.camera(withTarget: coordinate, zoom: 17)
+            mapView.camera = camera
+            mapView.isUserInteractionEnabled = false
+        } else {
+            // hide "locationMark" in if user is skipped location "pinning"
+            locationMark.isHidden = true
+        }
+    }
 }

@@ -19,6 +19,12 @@
 		833878931FE2D31C00F1B7C2 /* AddressDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833878921FE2D31C00F1B7C2 /* AddressDataManager.swift */; };
 		833878951FE2E6FE00F1B7C2 /* UIActivityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833878941FE2E6FE00F1B7C2 /* UIActivityPresenter.swift */; };
 		8338789B1FE3026400F1B7C2 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338789A1FE3026400F1B7C2 /* AddressViewController.swift */; };
+		8338789D1FE32B0D00F1B7C2 /* AddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338789C1FE32B0D00F1B7C2 /* AddressTableViewController.swift */; };
+		833878A51FE334CD00F1B7C2 /* EdgeInsetsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833878A41FE334CD00F1B7C2 /* EdgeInsetsTextField.swift */; };
+		833878A71FE33CF400F1B7C2 /* ModelArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833878A61FE33CF400F1B7C2 /* ModelArea.swift */; };
+		833878AA1FE3535F00F1B7C2 /* RequestParameterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833878A91FE3535F00F1B7C2 /* RequestParameterBuilder.swift */; };
+		833878AD1FE368E200F1B7C2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833878AC1FE368E200F1B7C2 /* LocationManager.swift */; };
+		83B2862B1FE3810300A31337 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2862A1FE3810300A31337 /* DoubleExtension.swift */; };
 		FE985B22C5E193A6311BA5EF /* Pods_Salony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FAB5C0D82ECD8256073D1E /* Pods_Salony.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +44,12 @@
 		833878921FE2D31C00F1B7C2 /* AddressDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDataManager.swift; sourceTree = "<group>"; };
 		833878941FE2E6FE00F1B7C2 /* UIActivityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityPresenter.swift; sourceTree = "<group>"; };
 		8338789A1FE3026400F1B7C2 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		8338789C1FE32B0D00F1B7C2 /* AddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewController.swift; sourceTree = "<group>"; };
+		833878A41FE334CD00F1B7C2 /* EdgeInsetsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetsTextField.swift; sourceTree = "<group>"; };
+		833878A61FE33CF400F1B7C2 /* ModelArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelArea.swift; sourceTree = "<group>"; };
+		833878A91FE3535F00F1B7C2 /* RequestParameterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParameterBuilder.swift; sourceTree = "<group>"; };
+		833878AC1FE368E200F1B7C2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		83B2862A1FE3810300A31337 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		8B9C6B919FC3F03980C9CCE8 /* Pods-Salony.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salony.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Salony/Pods-Salony.debug.xcconfig"; sourceTree = "<group>"; };
 		B05FDE488D07196C17466161 /* Pods-Salony.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salony.release.xcconfig"; path = "Pods/Target Support Files/Pods-Salony/Pods-Salony.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8338788E1FE2D09000F1B7C2 /* ModelAddress.swift */,
+				833878A61FE33CF400F1B7C2 /* ModelArea.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,7 +144,11 @@
 		833878811FE2C15D00F1B7C2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				833878AB1FE3689E00F1B7C2 /* CoreClasses */,
+				833878A31FE3347800F1B7C2 /* UIClasses */,
+				833878A01FE3318200F1B7C2 /* Extensions */,
 				833878861FE2C2F600F1B7C2 /* Protocols */,
+				833878A81FE3530D00F1B7C2 /* CoreServices */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -185,6 +202,7 @@
 			children = (
 				8338787C1FE2C0DD00F1B7C2 /* MapViewController.swift */,
 				8338789A1FE3026400F1B7C2 /* AddressViewController.swift */,
+				8338789C1FE32B0D00F1B7C2 /* AddressTableViewController.swift */,
 			);
 			path = Addresses;
 			sourceTree = "<group>";
@@ -203,6 +221,38 @@
 				833878921FE2D31C00F1B7C2 /* AddressDataManager.swift */,
 			);
 			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		833878A01FE3318200F1B7C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83B2862A1FE3810300A31337 /* DoubleExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		833878A31FE3347800F1B7C2 /* UIClasses */ = {
+			isa = PBXGroup;
+			children = (
+				833878A41FE334CD00F1B7C2 /* EdgeInsetsTextField.swift */,
+			);
+			path = UIClasses;
+			sourceTree = "<group>";
+		};
+		833878A81FE3530D00F1B7C2 /* CoreServices */ = {
+			isa = PBXGroup;
+			children = (
+				833878A91FE3535F00F1B7C2 /* RequestParameterBuilder.swift */,
+			);
+			path = CoreServices;
+			sourceTree = "<group>";
+		};
+		833878AB1FE3689E00F1B7C2 /* CoreClasses */ = {
+			isa = PBXGroup;
+			children = (
+				833878AC1FE368E200F1B7C2 /* LocationManager.swift */,
+			);
+			path = CoreClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,9 +369,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Salony/Pods-Salony-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -335,12 +388,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B2862B1FE3810300A31337 /* DoubleExtension.swift in Sources */,
 				8338789B1FE3026400F1B7C2 /* AddressViewController.swift in Sources */,
 				833878931FE2D31C00F1B7C2 /* AddressDataManager.swift in Sources */,
+				833878AD1FE368E200F1B7C2 /* LocationManager.swift in Sources */,
 				8338788C1FE2C56800F1B7C2 /* Network.swift in Sources */,
 				8338787D1FE2C0DD00F1B7C2 /* MapViewController.swift in Sources */,
 				8338786B1FE2BEEA00F1B7C2 /* AppDelegate.swift in Sources */,
+				833878AA1FE3535F00F1B7C2 /* RequestParameterBuilder.swift in Sources */,
 				833878881FE2C31F00F1B7C2 /* Constants.swift in Sources */,
+				8338789D1FE32B0D00F1B7C2 /* AddressTableViewController.swift in Sources */,
+				833878A71FE33CF400F1B7C2 /* ModelArea.swift in Sources */,
+				833878A51FE334CD00F1B7C2 /* EdgeInsetsTextField.swift in Sources */,
 				8338788F1FE2D09000F1B7C2 /* ModelAddress.swift in Sources */,
 				8338788A1FE2C4C500F1B7C2 /* APIEndpoints.swift in Sources */,
 				833878951FE2E6FE00F1B7C2 /* UIActivityPresenter.swift in Sources */,

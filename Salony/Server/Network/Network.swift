@@ -12,6 +12,7 @@ class Network {
     
     /// completion handler for requests
     typealias CompletionBlock = (_ success: Bool, _ result: Data?, _ response: URLResponse? ) -> Void
+    let parameterBuilder = RequestParameterBuilder()
     
     /// HTTP methods
     enum HTTPMethod: String {

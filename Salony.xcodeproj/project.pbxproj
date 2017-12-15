@@ -25,8 +25,19 @@
 		833878AA1FE3535F00F1B7C2 /* RequestParameterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833878A91FE3535F00F1B7C2 /* RequestParameterBuilder.swift */; };
 		833878AD1FE368E200F1B7C2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833878AC1FE368E200F1B7C2 /* LocationManager.swift */; };
 		83B2862B1FE3810300A31337 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2862A1FE3810300A31337 /* DoubleExtension.swift */; };
+		83B286431FE3BCDF00A31337 /* SalonyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B286421FE3BCDF00A31337 /* SalonyTests.swift */; };
 		FE985B22C5E193A6311BA5EF /* Pods_Salony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FAB5C0D82ECD8256073D1E /* Pods_Salony.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83B286451FE3BCDF00A31337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8338785F1FE2BEEA00F1B7C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 833878661FE2BEEA00F1B7C2;
+			remoteInfo = Salony;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		68FAB5C0D82ECD8256073D1E /* Pods_Salony.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Salony.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +61,9 @@
 		833878A91FE3535F00F1B7C2 /* RequestParameterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParameterBuilder.swift; sourceTree = "<group>"; };
 		833878AC1FE368E200F1B7C2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		83B2862A1FE3810300A31337 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		83B286401FE3BCDF00A31337 /* SalonyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalonyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B286421FE3BCDF00A31337 /* SalonyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonyTests.swift; sourceTree = "<group>"; };
+		83B286441FE3BCDF00A31337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B9C6B919FC3F03980C9CCE8 /* Pods-Salony.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salony.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Salony/Pods-Salony.debug.xcconfig"; sourceTree = "<group>"; };
 		B05FDE488D07196C17466161 /* Pods-Salony.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Salony.release.xcconfig"; path = "Pods/Target Support Files/Pods-Salony/Pods-Salony.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +74,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE985B22C5E193A6311BA5EF /* Pods_Salony.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B2863D1FE3BCDF00A31337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				833878691FE2BEEA00F1B7C2 /* Salony */,
+				83B286411FE3BCDF00A31337 /* SalonyTests */,
 				833878681FE2BEEA00F1B7C2 /* Products */,
 				0E6370C4D4C1BDF0824D5C25 /* Pods */,
 				26AD11344BD3475CC7441122 /* Frameworks */,
@@ -97,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				833878671FE2BEEA00F1B7C2 /* Salony.app */,
+				83B286401FE3BCDF00A31337 /* SalonyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,6 +278,15 @@
 			path = CoreClasses;
 			sourceTree = "<group>";
 		};
+		83B286411FE3BCDF00A31337 /* SalonyTests */ = {
+			isa = PBXGroup;
+			children = (
+				83B286421FE3BCDF00A31337 /* SalonyTests.swift */,
+				83B286441FE3BCDF00A31337 /* Info.plist */,
+			);
+			path = SalonyTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,6 +310,24 @@
 			productReference = 833878671FE2BEEA00F1B7C2 /* Salony.app */;
 			productType = "com.apple.product-type.application";
 		};
+		83B2863F1FE3BCDF00A31337 /* SalonyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83B286491FE3BCDF00A31337 /* Build configuration list for PBXNativeTarget "SalonyTests" */;
+			buildPhases = (
+				83B2863C1FE3BCDF00A31337 /* Sources */,
+				83B2863D1FE3BCDF00A31337 /* Frameworks */,
+				83B2863E1FE3BCDF00A31337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83B286461FE3BCDF00A31337 /* PBXTargetDependency */,
+			);
+			name = SalonyTests;
+			productName = SalonyTests;
+			productReference = 83B286401FE3BCDF00A31337 /* SalonyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -291,6 +341,11 @@
 					833878661FE2BEEA00F1B7C2 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+					};
+					83B2863F1FE3BCDF00A31337 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 833878661FE2BEEA00F1B7C2;
 					};
 				};
 			};
@@ -308,6 +363,7 @@
 			projectRoot = "";
 			targets = (
 				833878661FE2BEEA00F1B7C2 /* Salony */,
+				83B2863F1FE3BCDF00A31337 /* SalonyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +376,13 @@
 				833878751FE2BEEA00F1B7C2 /* LaunchScreen.storyboard in Resources */,
 				833878721FE2BEEA00F1B7C2 /* Assets.xcassets in Resources */,
 				833878701FE2BEEA00F1B7C2 /* Address.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B2863E1FE3BCDF00A31337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +469,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83B2863C1FE3BCDF00A31337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B286431FE3BCDF00A31337 /* SalonyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83B286461FE3BCDF00A31337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 833878661FE2BEEA00F1B7C2 /* Salony */;
+			targetProxy = 83B286451FE3BCDF00A31337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8338786E1FE2BEEA00F1B7C2 /* Address.storyboard */ = {
@@ -567,6 +646,38 @@
 			};
 			name = Release;
 		};
+		83B286471FE3BCDF00A31337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2DXXBX2J2A;
+				INFOPLIST_FILE = SalonyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Vahagn.SalonyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Salony.app/Salony";
+			};
+			name = Debug;
+		};
+		83B286481FE3BCDF00A31337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2DXXBX2J2A;
+				INFOPLIST_FILE = SalonyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Vahagn.SalonyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Salony.app/Salony";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -584,6 +695,15 @@
 			buildConfigurations = (
 				8338787A1FE2BEEA00F1B7C2 /* Debug */,
 				8338787B1FE2BEEA00F1B7C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83B286491FE3BCDF00A31337 /* Build configuration list for PBXNativeTarget "SalonyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B286471FE3BCDF00A31337 /* Debug */,
+				83B286481FE3BCDF00A31337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -64,7 +64,7 @@ class AddressDataManager: Network {
     }
     
     private func fetchAddressInfo(coordinate:  CLLocationCoordinate2D, completion: @escaping (ModelAddress?) -> Void) {
-        let addressParameter = RequestParameterBuilder.addressParameter(coordinate: coordinate)
+        let addressParameter = parameterBuilder.addressParameter(coordinate: coordinate)
         request(APIEndpoints.userAddress, method: .Get, parameters: addressParameter) { (success, data, response) in
             guard let data = data, success else {
                 // TODO: - create error handling

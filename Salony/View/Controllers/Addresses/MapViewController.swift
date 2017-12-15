@@ -76,7 +76,7 @@ private extension MapViewController {
         let camera = GMSCameraPosition.camera(withLatitude: 29.364813, longitude: 47.982395, zoom: 17)
         
         mapView.camera = camera
-        mapView.padding = UIEdgeInsets(top: 0, left: 3, bottom: 55, right: 0)
+        mapView.padding = UIEdgeInsets(top: 0, left: 5, bottom: 55, right: 0)
     }
     
     private func configureLocationButton() {
